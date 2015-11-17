@@ -7,10 +7,11 @@
 function translate(str) {
 
   str = str.toLowerCase().split('');
+
   if(str[0] === "a" || str[0] === "e" || str[0] === "i" || str[0] === "o" || str[0] === "u"){
     str.push("way");
   } else {
-    while(str[0] !== "a" && str[0] !== "e" && str[0] !== "i" && str[0] !==   "o" && str[0] !== "u"){
+    while(str[0] !== "a" && str[0] !== "e" && str[0] !== "i" && str[0] !== "o" && str[0] !== "u"){
       var holder = str[0];
       str.push(holder);
       str.splice(0, 1);
@@ -19,7 +20,6 @@ function translate(str) {
   }
 
   str = str.join('');
-
 
  return str;
 }
